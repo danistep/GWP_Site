@@ -1,0 +1,94 @@
+@import url(normalize.css);
+
+*
+{
+	font-family:"Times New Roman", serif;
+	font-size:12pt;
+	text-align:justify;
+}
+
+.pagebreak
+{
+	page-break-before:always;
+}
+
+a
+{
+	color:#000;
+	text-decoration:underline;
+}
+
+body
+{
+	background:#FFF;
+	height:842px;
+	width:595px;
+}
+
+body>main>section>a[href]:after
+{
+	content:" <"attr(href)">";
+	color:#000;
+	text-decoration:underline;
+}
+
+details
+{
+	display:block;
+}
+
+dl dd,dl a
+{
+	font-size:small;
+}
+
+dt
+{
+	font-size:large;
+	font-weight:700;
+	padding-top:20px;
+}
+
+figcaption,h3
+{
+	text-align:center;
+}
+
+figure,dl img
+{
+	float:right;
+}
+
+figure::after
+{
+	clear:right;
+}
+
+html
+{
+	margin-left:50px;
+	margin-right:70px;
+}
+
+img
+{
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+li
+{
+	list-style:none;
+}
+
+li img
+{
+	float:left;
+	border-right:8px solid #FFF;
+}
+
+nav,main > header,footer,summary,header > img
+{
+	display:none;
+} 

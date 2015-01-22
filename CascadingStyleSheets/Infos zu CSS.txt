@@ -1,0 +1,48 @@
+@import url(gestalt.css) muss in der 1ten zeile im CSS stehen
+/* kommentare sehen aus wie in java */
+
+Regel zur Gestaltung
+
+was    { wie }
+selector{ property:value;
+		.
+		.
+		.
+		}
+		
+		
+selektoren:
+	Elemente
+	Attribute allgemein/gebunden an einen Wert
+	bestimmte Attribute: 	id #
+							class .
+							
+	"alles", Universalselektor: *
+
+	Parents, Children, Siblings
+	Pseudoelemente, Pseudoklassen
+	
+leerstelle als syntax für nachfahren kommas für aufzählungen
+	
+Beispiel
+
+h1{
+	font-weight:	bold;
+	color:			#800000
+	}
+	
+	allgemeines zuerst spezifisches danach
+	
+:hover	als pseudoklasse für alle elemte verfügbar
+:: für pseudoelemente
+
+id: # ; einzigartig ; id="x" -> x darf nur einmal im html dokument vorkommen
+class: . ; gruppe ; class="y" <p class=y> ; <ul class="y">
+
+
+Attribut selektoren
+
+mit eckigen klammern
+
+h1[title]:hover,h2[title]:hover{
+	background-color	#e0e0e0
