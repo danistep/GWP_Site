@@ -150,13 +150,42 @@
 					davon gut zu sein. </p>
 					<img src="ImageIndex/numericRating2.png" alt="5/10 Hier gibt es nichts zu verpassen">
 				</article>
-				<h3>Kommentare</h3>
-				<form>
-				<label>Name: <input type="text" name="Benutzername">
-				</label>
-				</form>
-				<textarea name="kommentarFeld" rows="5" cols="90"></textarea>
-				<input type="submit" value="Submit">
+						<h3 >Kommentare</h3>
+                				<div id="usercom"> </div>
+						<form>
+							<label>Name: <input type="text" name="Benutzername" id="Username" >
+							</label>
+						</form>
+						<textarea name="kommentarFeld" rows="5" cols="90" id="CommentsField"></textarea>
+						<input type="submit" value="Submit" onclick= "postComment()">
+			</section>
+        <script type="text/javascript">
+            var commentcount = -1;
+            loadAllComments();
+            
+
+            function postComment() {
+                commentcount = commentcount + 1;   
+                var userName = document.getElementById("Username").value; //Nimmt was im felder steht
+                var com = document.getElementById("CommentsField").value;
+
+                localStorage.setItem("Username" + commentcount, userName); // Speichert im localstorage  
+                localStorage.setItem("Comment" + commentcount, com); 
+                    
+            	loadAllComments(); // ladt neue Kommentare
+            }                
+                
+            function loadAllComments() {
+               var allcom = ""; 
+               for (var i=0; i<=commentcount; i++){ // Jeder Kommentar hat sozusagen "id" deswegen können wir alle mit schleife zugreifen
+                    var userName = localStorage.getItem("Username"+i); // i - ist "id" für jeder Kommentar
+                    var comment = localStorage.getItem("Comment"+i);
+                    allcom = allcom + userName + "<br>" + comment + "<br>"; 
+                }
+                document.getElementById("usercom").innerHTML = allcom ; 
+            }
+         
+        </script>
 			</section>
 			<footer>
 				<p>Diese Seite wurde von Gruppe 2 im Zuge der Veranstaltung Webprogrammierung erstellt.</p>
