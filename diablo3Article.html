@@ -9,6 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<link type="text/css" href="CascadingStyleSheets/cssMain.css" rel="stylesheet" media="screen"/>
 		<link type="text/css" href="CascadingStyleSheets/cssPrint.css" rel="stylesheet" media="print"/>
+		<script src="javascript.js" title="javascript" type="text/javascript"> </script>
 		<!--
 		
 		einbindung von CSS wie folgt: 
@@ -143,7 +144,14 @@ style="font-size=1,5cm"-->
 					vor der Tür steht. Man hat einfach nicht genug Zeit.</p>
 					<img src="ImageIndex/numericRating.png" alt="9/10 Ein echter Toptitel, unbedingt Nachholen">
 				</article>
-				<h3>Kommentare</h3>
+				<h3 >Kommentare</h3>
+				<form>
+					<label>Name: <input type="text" name="Benutzername" id="Username" value="Username" class="default">
+					</label>
+					<textarea name="kommentarFeld" rows="5" cols="90" id="CommentsField" class="default">Kommentar</textarea>
+				</form>
+				<input type="submit" value="Submit" id="submit">
+				<div id="usercom"> </div>
 			</section>
 			<footer>
 				<p>Diese Seite wurde von Gruppe 2 im Zuge der Veranstaltung Webprogrammierung erstellt.</p>

@@ -33,6 +33,14 @@ dl
 	overflow:hidden;
 	resize:horizontal;
 }
+.default
+{
+	color:#A4A4A4;
+}
+.user
+{
+	color:#000;
+}
 section > dl > dd > img
 {
 	float:right;
@@ -60,6 +68,30 @@ article > ul, section > ul
 {
 	list-style-type:none;
 }
+
+div#usercom
+{
+	border-top:3px solid #0078e6;
+	margin-left: 1vw;
+	margin-top: 30px;
+	padding-top: 20px;
+	max-width: 40vw;
+	font-size: 13px;
+	color: #0067d5;
+	font-style: bold;
+}
+
+div#usercom > p
+{
+	color: #000;
+	max-width: 40vw;
+	margin-left: 1vw;
+	margin-right: 1vw;
+	font-size: 16px;
+	overflow-x: sroll;
+	border-bottom:1px solid #0078e6;
+}
+
 @media screen and (max-width:599px) {
 				body>header{
 					position: relative;
@@ -394,4 +426,5 @@ article > ul, section > ul
 				{
 					max-width: 800px;
 				}
+				
 }
